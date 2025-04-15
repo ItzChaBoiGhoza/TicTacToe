@@ -1,1 +1,1 @@
-import src/gamefunctions import *
+from src.gamefunctions import *
