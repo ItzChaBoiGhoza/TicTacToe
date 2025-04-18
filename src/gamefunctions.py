@@ -1,4 +1,4 @@
-from IPython.display import clear_output
+# from IPython.display import clear_output
 import random
 
 # Display the Tic Tac Toe board
@@ -11,7 +11,18 @@ def display_board(board):
     
 # Player choose a marker either 'X' or 'O'
 def player_marker():
-    pass
+    marker = ''
+    
+    while not (marker == 'X' or marker == 'O'):
+        marker = input("Please select your marker 'X' or 'O': ").upper()
+        
+        if marker not in ('X', 'O'):
+            print("Incorrect input, pick 'X' or 'O'!")
+            
+    if marker == 'X':
+        return ('X', 'O')
+    else:
+        return ('O', 'X')
 
 # Place the player's marker at choosen position
 def place_marker(board, marker, position):
