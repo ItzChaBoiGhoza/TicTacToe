@@ -26,11 +26,15 @@ def player_marker():
 
 # Place the player's marker at choosen position
 def place_marker(board, marker, position):
-    pass
+    board[position] = marker
 
 # Check to see of the picked position is free, if free return TRUE, if taken return FALSE
 def space_check(board, position):
-    pass
+    if board[position] == ' ':
+        return True
+    else:
+        return False
+        
 
 # Player choose the position where they want to place the marker, return the picked position
 def player_choice(board):
